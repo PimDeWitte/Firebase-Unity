@@ -24,9 +24,13 @@ public class Startup {
 
 	[DllImport("FirebaseProxy")]
 	private static extern void DestroyJvm( );
-
+	
+	static bool hasInitialized = false;
 	static Startup()
 	{
+		//if (!hasInitialized) {
+			Debug.Log("Re-initialized JVM");
+			hasInitialized = true;
 			EditorApplication.CallbackFunction oldCallback = EditorApplication.playmodeStateChanged;
 			EditorApplication.playmodeStateChanged = delegate {
 				if (!EditorApplication.isPlaying) {
@@ -44,5 +48,6 @@ public class Startup {
 			};
 			FirebaseEditorImpl.Initialize();
 			Firebase.Register (new FirebaseEditorImpl.Factory ());
+		//}
 	}
 }
