@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8659ccea8b0ca42cbab73d90ee8e3e81
-timeCreated: 1435328864
+guid: a86515e0ecf9c4d4e8c44fcc18ff6b67
+timeCreated: 1431985817
 licenseType: Free
 PluginImporter:
   serializedVersion: 1
@@ -8,9 +8,16 @@ PluginImporter:
   executionOrder: {}
   isPreloaded: 0
   platformData:
-    Any:
+    Android:
       enabled: 1
       settings: {}
+    Any:
+      enabled: 0
+      settings: {}
+    Editor:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
   userData: 
   assetBundleName: 
   assetBundleVariant: 
